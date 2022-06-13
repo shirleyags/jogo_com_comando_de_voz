@@ -14,7 +14,7 @@ function verificaSeOChutePossuiUmValorValido(guess) {
       elementoChute.innerHTML += "<div>Valor inválido</div>"
     }
   } else if (numeroForMaiorOuMenorQueOValorPermitido(numero)) {
-    elementoChute.innerHTML += `<div>Valor inválido. O número secreto precisa estar entre ${menorValor} e ${maiorValor}</div>`
+    elementoChute.innerHTML += `<div>Valor inválido. O número precisa estar entre ${menorValor} e ${maiorValor}</div>`
   } else if (numero == numeroSorteado) {
     document.body.innerHTML = `
             <h2>Você acertou!</h2>
@@ -23,10 +23,10 @@ function verificaSeOChutePossuiUmValorValido(guess) {
         `
   } else if (numero > numeroSorteado) {
     elementoChute.innerHTML +=
-      '<div>O número secreto é menor <i class="fa-solid fa-arrow-down-long"></i></div>'
+      '<div>O número que eu pensei é menor <i class="fa-solid fa-arrow-down-long"></i></div>'
   } else {
     elementoChute.innerHTML +=
-      '<div>O número secreto é maior <i class="fa-solid fa-arrow-up-long"></i></div>'
+      '<div>O número que eu pensei é maior <i class="fa-solid fa-arrow-up-long"></i></div>'
   }
 }
 
