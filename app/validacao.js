@@ -14,7 +14,7 @@ function verificaSeOChutePossuiUmValorValido(guess) {
       elementoChute.innerHTML += "<div>Valor inválido</div>"
     }
   } else if (numeroForMaiorOuMenorQueOValorPermitido(numero)) {
-    elementoChute.innerHTML += `<div>Valor inválido. O número precisa estar entre ${lowerValue} e ${highestValue}</div>`
+    elementoChute.innerHTML += `<div>Valor inválido. O número precisa estar entre ${menorValor} e ${maiorValor}</div>`
   } else if (numero == numeroSorteado) {
     document.body.innerHTML = `
             <h2>Você acertou!</h2>
@@ -35,7 +35,7 @@ function chuteForInvalido(numero) {
 }
 
 function numeroForMaiorOuMenorQueOValorPermitido(numero) {
-  return numero > highestValue || numero < lowerValue
+  return numero > maiorValor || numero < menorValor
 }
 
 document.body.addEventListener("click", (e) => {

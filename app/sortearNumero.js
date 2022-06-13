@@ -1,14 +1,14 @@
-const highestValue = 100
-const lowerValue = 1
+const maiorValor = 100
+const menorValor = 1
 
 const elementoMenorValor = document.querySelector("#lower-value")
-elementoMenorValor.innerHTML = lowerValue
+elementoMenorValor.innerHTML = menorValor
 
 const elementoMaiorValor = document.querySelector("#highest-value")
-elementoMaiorValor.innerHTML = highestValue
+elementoMaiorValor.innerHTML = maiorValor
 
 function sortearNumero() {
-  return parseInt(Math.random() * highestValue + 1)
+  return parseInt(Math.random() * maiorValor + 1)
 }
 
 const numeroSorteado = sortearNumero()
