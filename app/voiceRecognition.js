@@ -1,4 +1,4 @@
-const elementoChute = document.querySelector("#guess")
+const guessElement = document.querySelector("#guess")
 
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition
 
@@ -10,12 +10,12 @@ recognition.addEventListener("result", onSpeak)
 
 function onSpeak(e) {
   guess = e.results[0][0].transcript
-  exibeChuteNaTela(guess)
-  verificaSeOChutePossuiUmValorValido(guess)
+  showGuess(guess)
+  checkGuessHasAvalidValue(guess)
 }
 
-function exibeChuteNaTela(guess) {
-  elementoChute.innerHTML = `
+function showGuess(guess) {
+  guessElement.innerHTML = `
         <div>Você disse:</div>
         <span class="box">${guess}</span>
      `
